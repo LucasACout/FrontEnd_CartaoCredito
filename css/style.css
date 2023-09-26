@@ -1,0 +1,121 @@
+:root {
+  /* Primarias */
+  
+  /* Neutras */
+  --Branco: hsl(0, 0%, 100%);
+  --Cinza: hsl(270, 3%, 87%);
+  --Vinho: hsl(279, 6%, 55%);
+  --Roxo: hsl(278, 68%, 11%);
+}
+
+@font-face {
+  font-family: minhaFonte;
+  src: url('../font/Space_Grotesk/SpaceGrotesk.ttf');
+}
+
+.content {
+  display: grid;
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+body {
+  background-image: url('../images/bg-main-desktop.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+  font-family: minhaFonte;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cartao {
+  position: relative;
+  box-sizing: border-box;
+  width: 447px;
+  height: 245px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 30px;
+  clear: both;
+}
+
+.nome_data {
+  position: absolute;
+  width: 85%;
+  bottom: 30px;
+}
+
+.info {
+  margin-top: 60px;
+  color: var(--Cinza);
+}
+
+.info_c2 {
+  position: relative;
+  top: 80px;
+  right: 30px;
+  float: right;
+  color: var(--Branco);
+}
+
+fieldset {
+  border: 0;
+}
+
+.formulario {
+  margin-top: 80px;
+  width: 70%;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.formulario input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-family: minhaFonte;
+  margin-top: 2px;
+  border: 1px var(--Cinza) solid;
+}
+
+.formulario input::placeholder {
+  opacity: 0.5;
+}
+
+.formulario input:focus {
+  border: solid 1px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(white, white), linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  outline: none;
+}
+
+.textoform {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+  color: var(--Roxo);
+}
+
+.enviar {
+  color: var(--Branco);
+  background-color: var(--Roxo);
+  text-align: center;
+  font-size: 1.1em;
+  font-family: minhaFonte;
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px;
+  margin-top: 25px;
+}

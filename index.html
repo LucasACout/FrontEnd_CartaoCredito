@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <div class="content">
+    <div class="">
+      <div class="cartao" style="background-image: url('/images/bg-card-front.png'); margin-bottom: 40px;">
+        <img src="/images/card-logo.svg" alt="Cartao Logo" style="display: block;">
+        <div class="info">
+          <p style="font-size: 1.75em; margin-bottom: 20px;" id="numero"><b>0000 0000 0000 0000</b></p>  
+          <div class="nome_data">
+            <p style="margin: 0; text-transform: uppercase;">
+              <span id="nome">Jane Appleseed</span> 
+              <span id="data" style="float: right;">00/00</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cartao" style="background-image: url('/images/bg-card-back.png'); margin-left: 100px;">
+        <span id="cvv" class="info_c2">
+          000
+        </span>
+      </div>
+    </div>
+    <!-- Formulário -->
+    <div>
+      <div class="formulario">
+        <form action="" >
+          <fieldset class="nome">
+            <label class="textoform" for="nome">Nome do Proprietário</label><br>
+            <input type="text" oninput="mudar(event)" name="nome" maxlength="25" placeholder="ex. Jane Appleseed">
+          </fieldset>
+          <fieldset>
+            <label class="textoform" for="">Número do Cartão</label><br>
+            <input type="text" pattern="^\d{4} \d{4} \d{4} \d{4}$" oninput="mudar(event)" name="numero" maxlength="19" placeholder="ex. 1234 5678 9123 0000">
+          </fieldset>
+          <fieldset class="data">
+            <div>
+              <label class="textoform" for="">Val. Data (MM/AA)</label><br>
+              <div class="data">
+                <div>
+                  <input type="text" oninput="mudar(event)" pattern="^\d{2}$" name="data_mes" id="dm" maxlength="2" placeholder="MM">
+                </div>
+                <div>
+                  <input type="text" oninput="mudar(event)" pattern="^\d{2}$" name="data_ano" id="da" maxlength="2" placeholder="AA">
+                </div>
+              </div>
+            </div>
+            <div>
+              <label class="textoform" for="">CVV</label><br>
+              <input type="text" oninput="mudar(event)" pattern="^\d{3}$" name="codigo" maxlength="3" placeholder="ex. 123">
+            </div>
+          </fieldset> 
+          <fieldset>
+            <button class="enviar" type="submit">Confirmar</button>
+          </fieldset>
+        </form>
+        <!-- Cardholder Name
+        e.g. Jane Appleseed
+
+        Card Number
+        e.g. 1234 5678 9123 0000
+
+        Exp. Date (MM/YY)
+        MM
+        YY
+
+        CVC
+        e.g. 123
+
+        Confirm -->
+      </div>
+      <!-- <div class="enviado">
+        Thank you!
+        We've added your card details
+        Continue
+      </div> -->
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+  <!-- Completed state start -->
+</body>
+</html>
